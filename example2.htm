@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { 
+  box-sizing: border-box; 
+}
+
+body {
+  padding: 2.5em;
+  background-color: #dfeff7;
+}
+
+a:link, a:visited {
+  background-color: #0ca6f2;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 36px;
+  padding: .5em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #444;
+}
+
+a:before {
+  content: "";
+  display: block;
+  background-color: #0ca6f2;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #4AC9FA 0%, #0b95d9 40%);
+  box-shadow: 0px -1px 2px 0 #065881 inset,
+              0px 1px 1px 1px #ccc,
+              0 0 0 6px #fff,
+              0 2px 12px 8px #ddd;
+}
+
+a:active {
+  background-color: #0091DC;
+}
+
+a:active:before {
+  background-color: #0091DC;
+  background-image: none;
+  box-shadow: 0px 1px 2px 0 #444 inset,
+              0 0 0 6px #fff,
+              0 2px 12px 8px #ddd;
+}
+
+a:hover {
+  background: #0b94d9;
+}​
+
+a:hover:before {
+  background-image: linear-gradient(to bottom, #4FBEEB 0%, #0082C6 40%);
+}
+
+.group {
+  margin-bottom: 3em;
+}
+
+.no-cssgradients a:before {
+  background-image: none;
+}
+.no-cssgradients a:hover:before {
+  background: #0b94d9;
+}
+
+a.no-border:before {
+  box-shadow: 0px -1px 2px 0 #065881 inset,
+              0px 1px 1px 1px #ccc;
+}
+    </style>
+</head>
+<body>
+    <div class="group">
+        <a href="#">Location</a>
+      </div>
+      
+      <div class="group no-cssgradients">
+        <a href="#">Location</a>
+      </div>
+      
+      <div class="group">
+        <a href="#" class="no-border">Location</a>
+      </div>
+</body>
+</html>
